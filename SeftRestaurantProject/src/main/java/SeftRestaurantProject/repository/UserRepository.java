@@ -14,7 +14,12 @@ public class UserRepository {
 	public List<User> getUserByUsernameAndPassword(String username, String password){
 		List<User> list = new ArrayList<User>();
 		Connection connection = MysqlConnection.getConnection();
-		String query = "select * from users u where u.username = ? and u.password = ?";
+		String query = "SELECT\r\n"
+				+ "	u.*,\r\n"
+				+ "    ur.role_id\r\n"
+				+ "FROM users AS u\r\n"
+				+ "LEFT JOIN user_role AS ur ON u.id = ur.id\r\n"
+				+ "WHERE u.username = ? AND u.password = ?";
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(query);
 			preparedStatement.setString(1, username);
@@ -29,6 +34,7 @@ public class UserRepository {
 				user.setPhonenumber(resultSet.getString("phonenumber"));
 				user.setGender(resultSet.getInt("gender"));
 				user.setUsername(resultSet.getString("username"));
+				user.setRole_ID(resultSet.getInt("role_id"));
 				list.add(user);
 			}
 		} catch (SQLException e) {

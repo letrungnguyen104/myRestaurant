@@ -37,7 +37,7 @@ datalist{
 .confirm-button{
     cursor: pointer;
     padding: 10px 20px;
-    background-color: rgb(175, 238, 255);
+    background-color: rgb(196, 215, 245);
     border-radius: 10px;
 }
 
@@ -54,7 +54,7 @@ datalist{
     text-align: center;
 }
 .button > *:hover{
-    background-color: rgb(121, 216, 242);
+    background-color: rgb(166, 189, 226);
     transition: all 0.5 ease;
 }
 
@@ -63,7 +63,7 @@ datalist{
     border: 1px solid rgb(175, 238, 255);
     padding: 10px 30px 10px 30px;
     border-radius: 10px;
-    background-color: rgb(175, 238, 255);
+    background-color: rgb(196, 215, 245);
 }
 
 .area-list, .table-list{
@@ -89,7 +89,7 @@ datalist{
 }
 
 .table-screen{
-    background-color: rgb(175, 238, 255);
+    background-color: rgb(196, 215, 245);
     width: 620px;
     height: 90%;
     border-radius: 10px;

@@ -10,11 +10,6 @@
     <link rel="stylesheet" href="assets/choosetable.css">
     <title>Chọn bàn</title>
 </head>
-
-<%
-	List<Table> list = (List<Table>)request.getAttribute("table");
-%>
-
 <body>
     <div class="choose-table">
         <div class = "left-content">
@@ -22,37 +17,24 @@
             <div class = "choose-table-label">
                 <label for="">CHỌN BÀN</label>
             </div>
-            <div class="pick-area">
-			    <form method="get" action="/table">
-			        <label for="area"><b>Chọn khu vực</b></label>
-			        <input class="area-list" type="text" name="area_id" list="area" onchange="this.form.submit()">
-			        <datalist id="area" name="area_id">
-			            <option value="1">Khu vực A</option>
-			            <option value="2">Khu vực B</option>
-			            <option value="3">Khu vực C</option>
-			        </datalist>
-			    </form>
-			</div>
+            <div class = "pick-area">
+                <div><b>Chọn khu vực</b>
+                </div>
+                <input class = "area-list" type="text" list="area">
+                <datalist id = "area">
+                    <option value="Khu vực A">Khu vực A</option>
+                    <option value="Khu vực B">Khu vực B</option>
+                    <option value="Khu vực C">Khu vực C</option>
+                </datalist>
+            </div>
             <div class = "pick-table">
                 <div><b>Chọn bàn</b></div>
                 <input class = "table-list" type="text" list="table">
-               <datalist id="table">
-				    <% 
-				        if (list != null && !list.isEmpty()) {
-				            for (Table table : list) { 
-				    %>
-				        <option value="<%= table.getTable_id() %>">
-				            Bàn <%= table.getTable_id() %>
-				        </option>
-				    <% 
-				            } 
-				        } else { 
-				    %>
-				        <option value="">Không có bàn nào</option>
-				    <% 
-				        } 
-				    %>
-			</datalist>
+                <datalist id = "table">
+                    <option value="B1">B1</option>
+                    <option value="B2">B2</option>
+                    <option value="B3">B3</option>
+                </datalist>
             </div>
             <div class = "button">
                 <div class = "confirm-button">Xác nhận</div>
@@ -61,24 +43,36 @@
         </div>
         <div class="right-content">
             <div class = "name-of-area"><b>KHU VỰC B</b></div>
-            <div class="table-screen">
-			    <% 
-			        if (list != null && !list.isEmpty()) {
-			            for (Table table : list) { 
-			    %>
-			        <div class="<%= table.getTable_status() == 1 ? "ordered" : "" %>">
-			            <div>Bàn <%= table.getTable_id() %></div>
-			            <div class="div-bottom"><%= table.getTable_status() == 0 ? "Bàn trống" : "Đang sử dụng" %></div>
-			        </div>
-			    <% 
-			            } 
-			        } else { 
-			    %>
-			        <div>Không có bàn nào trong khu vực này</div>
-			    <% 
-			        }
-			    %>
-			</div>
+            <div class = "table-screen">
+                <div>
+                    <div>B1</div>
+                    <div class = "div-bottom">Bàn trống</div>
+                </div>
+                <div>
+                    <div>B2</div>
+                    <div class = "div-bottom">Bàn trống</div>
+                </div>
+                <div class = "ordered">
+                    <div>B3</div>
+                    <div class = "div-bottom">27'</div>
+                </div>
+                <div>
+                    <div>B4</div>
+                    <div class = "div-bottom">Bàn trống</div>
+                </div>
+                <div>
+                    <div>B5</div>
+                    <div class = "div-bottom">Bàn trống</div>
+                </div>
+                <div>
+                    <div>B6</div>
+                    <div class = "div-bottom">Bàn trống</div>
+                </div>
+                <div>
+                    <div>B7</div>
+                    <div class = "div-bottom">Bàn trống</div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

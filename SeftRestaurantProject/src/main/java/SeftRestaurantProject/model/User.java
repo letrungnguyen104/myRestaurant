@@ -8,6 +8,7 @@ public class User {
 	private int gender;
 	private String username;
 	private String password;
+	private int role_id;
 	public int getId() {
 		return id;
 	}
@@ -50,6 +51,10 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	
+	public int getRole_ID() {
+		return role_id;
+	}
+	public void setRole_ID(int role) {
+		this.role_id = role;
+	}	
 }

@@ -26,7 +26,7 @@
                     <input type="password" name="password" class="password" placeholder="Password" required>
                 </div>
                 <div class="button">
-                    <button type="button" onclick="window.location.href='index.jsp'">Cancel</button>
+                    <button type="button" onclick="window.location.href='website.jsp'">Cancel</button>
                     <button type="submit">Log in</button>
                 </div>
                 <button class="create-acc-btn" type="button" onclick="window.location.href='signup.jsp'">Create New Account</button>

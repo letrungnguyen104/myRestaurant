@@ -6,11 +6,10 @@ import SeftRestaurantProject.model.User;
 import SeftRestaurantProject.repository.UserRepository;
 
 public class LoginService {
-	private UserRepository userRepository = new UserRepository();
-	
-	public boolean checkLogin(String username, String password) {
-		List<User> list = userRepository.getUserByUsernameAndPassword(username, password);
-		if(list.size() > 0) return true;
-		else return false;
-	}
+    private UserRepository userRepository = new UserRepository();
+    
+    public User checkLogin(String username, String password) {
+        List<User> list = userRepository.getUserByUsernameAndPassword(username, password);
+        return list.size() > 0 ? list.get(0) : null;
+    }
 }
