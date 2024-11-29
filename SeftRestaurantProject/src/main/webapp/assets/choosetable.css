@@ -72,10 +72,23 @@ datalist{
     border: 1px solid rgb(175, 238, 255);
 }
 
+.table > *, .area option{
+    padding: 5px 0px 5px 0px;
+    border-radius: 5px;
+    border: 1px solid rgb(175, 238, 255);
+}
+.table, .area{
+    width: 150px;
+    margin-top: 5px;
+    padding: 5px 0px 5px 0px;
+    border-radius: 5px;
+    border: 1px solid rgb(192, 232, 243);
+}
+
 .details-button{
     cursor: pointer;
     padding: 10px 40px 10px 40px;
-    background-color: rgb(175, 238, 255);
+    background-color: rgb(196, 215, 245);
     border: 1px solid rgb(175, 238, 255);
     border-radius: 10px;
 }

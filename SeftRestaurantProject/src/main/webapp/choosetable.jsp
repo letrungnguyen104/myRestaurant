@@ -20,25 +20,23 @@
             <div class = "pick-area">
                 <div><b>Chọn khu vực</b>
                 </div>
-                <input class = "area-list" type="text" list="area">
-                <datalist id = "area">
+                <select id = "area" class = "area">
                     <option value="Khu vực A">Khu vực A</option>
                     <option value="Khu vực B">Khu vực B</option>
                     <option value="Khu vực C">Khu vực C</option>
-                </datalist>
+                </select>
             </div>
             <div class = "pick-table">
                 <div><b>Chọn bàn</b></div>
-                <input class = "table-list" type="text" list="table">
-                <datalist id = "table">
+                <select id = "table" class = "table">
                     <option value="B1">B1</option>
                     <option value="B2">B2</option>
                     <option value="B3">B3</option>
-                </datalist>
+                </select>
             </div>
             <div class = "button">
                 <div class = "confirm-button">Xác nhận</div>
-                <div class = "confirm-button" onclick="window.location.href='login.jsp'">Thoát</div>
+                <div class = "confirm-button">Thoát</div>
             </div>
         </div>
         <div class="right-content">
